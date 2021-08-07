@@ -2,7 +2,7 @@
 
 https://user-images.githubusercontent.com/54612573/128615739-8f6ff8a6-d583-45d0-b870-3ddbe1a1e924.mov
 
-Open tictactoe.html from your browser to play the game. Plain HTML/CSS/Javascript were used to create the app. No libraries used
+Open tictactoe.html from your browser to play the game. Plain HTML/CSS/Javascript were used to create the app.
 
 All requirements including bonus are fully implemented.
 
