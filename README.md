@@ -4,6 +4,8 @@ https://user-images.githubusercontent.com/54612573/128615739-8f6ff8a6-d583-45d0-
 
 Open tictactoe.html from your browser to play the game. Plain HTML/CSS/Javascript were used to create the app. No libraries used
 
+All requirements including bonus are fully implemented.
+
 # Requirements
 1. The game must include a grid that is 3x3
 2. The game will include two local players: Blue and Yellow
