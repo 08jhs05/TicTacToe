@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>TIC TAC TOE</title>
+            <link rel="stylesheet" type="text/css" href="./style.css" />
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="vbZWbTGu"></script>
+        </head>
+        <body>
+            <div class="main">
+                <h1>Tic Tac Toe</h1>
+                <div class="container">
+                    <section class="player-section" id="player-blue">
+                        <div class="player-wrapper">
+                            <div class="player-title">Player <span style="color: #679BF1">BLUE</span></div>
+                            <div class="player-wins" id="wins-blue">WINS: 0</div>
+                        </div>
+                        <h2 class="player-status" id="status-blue"></h2>
+                    </section>
+                    <section class="game-section">
+                        <div id="tictactoe-board">
+                            <div class="tictactoe-row">
+                                <button class="tictactoe-cell" id="cell-0,0" value="0"></button>
+                                <button class="tictactoe-cell" id="cell-0,1" value="1"></button>
+                                <button class="tictactoe-cell" id="cell-0,2" value="2"></button>
+                            </div>
+                            <div class="tictactoe-row">
+                                <button class="tictactoe-cell" id="cell-1,0" value="3"></button>
+                                <button class="tictactoe-cell" id="cell-1,1" value="4"></button>
+                                <button class="tictactoe-cell" id="cell-1,2" value="5"></button>
+                            </div>
+                            <div class="tictactoe-row">
+                                <button class="tictactoe-cell" id="cell-2,0" value="6"></button>
+                                <button class="tictactoe-cell" id="cell-2,1" value="7"></button>
+                                <button class="tictactoe-cell" id="cell-2,2" value="8"></button>
+                            </div>
+                        </div>
+                        <button id="play-again-button">PLAY AGAIN</button>
+                        <div class="mode-control">
+                            <label class="mode-control-title">Random mode</label>
+                            <div class="radio-button-group">
+                                <label for="on">ON:</label>
+                                <input type="radio" id="random-control-on" value="on" name="random">
+                                <label for="off">OFF:</label>
+                                <input type="radio" id="random-control-off" value="off" name="random" checked>
+                            </div>
+                        </div>
+                        <div class="mode-control">
+                            <label class="mode-control-title">Play with keyboard</label>
+                            <div class="radio-button-group">
+                                <label for="on">ON:</label>
+                                <input type="radio" id="playkeyboard-control-on" value="on" name="playkeyboard">
+                                <label for="off">OFF:</label>
+                                <input type="radio" id="playkeyboard-control-off" value="off" name="playkeyboard" checked>
+                            </div>
+                        </div>
+                        <div>(Move with arrow keys, enter to confirm)</div>                        
+                        <div id="game-status"></div>
+                        <div id="share-buttons">
+                            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=I%20win%20TicTacToe%20game!">
+                            Tweet</a>
+                            <div class="fb-share-button" data-href="https://github.com/08jhs05/TicTacToe" data-layout="button" data-size="small">
+                                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2F08jhs05%2FTicTacToe&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="player-section" id="player-yellow">
+                        <div class="player-wrapper">
+                            <div class="player-title">Player <span style="color: #FFC40A">YELLOW</span></div>
+                            <div class="player-wins" id="wins-yellow">WINS: 0</div>
+                        </div>
+                        <h2 class="player-status" id="status-yellow"></h2>
+                    </section>
+                </div>
+            </div>
+        </body>
+        <script src="./tictactoe.js"></script>
+</html>
