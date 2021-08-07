@@ -30,6 +30,8 @@ const randomOffRadioBtn = document.getElementById("random-control-off");
 const keyboardOnRadioBtn = document.getElementById("playkeyboard-control-on");
 const keyboardOffRadioBtn = document.getElementById("playkeyboard-control-off");
 const shareButtons = document.getElementById("share-buttons");
+const fbButton = document.getElementById('fb-share-button');
+const twButton = document.getElementById('tw-share-button');
 
 // ================= add listners to buttons =================
 
@@ -100,6 +102,22 @@ keyboardOffRadioBtn.addEventListener("change", () => {
     keyboardOffRadioBtn.blur();
 });
 
+fbButton.addEventListener('click', function() {
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + "https://github.com/08jhs05/TicTacToe",
+        'facebook-share-dialog',
+        'width=800,height=600'
+    );
+    return false;
+});
+
+twButton.addEventListener('click', function() {
+    window.open("https://twitter.com/intent/tweet?text=I%20won%20TicTacToe%20game!",
+        'twitter-share-dialog',
+        'width=800,height=600'
+    );
+    return false;
+});
+
 // ================= initialize values and start the game =================
 
 initializeGame();
@@ -110,7 +128,7 @@ function initializeGame(){
     blueStatus.innerHTML = "Blue's turn!";
     yellowStatus.innerHTML = "";
     gameStatus.innerHTML = "";
-    // shareButtons.style.display = "none";
+    shareButtons.style.visibility = "hidden";
 
     for(let j = 0; j < boardCellButtons.length; j++){
         boardCellButtons[j].style.backgroundColor = "#FFFFFF";
@@ -160,7 +178,7 @@ function gameLoopFunction(){
 
                 gameStatus.innerHTML = `${isBlueTurn ? "BLUE" : "YELLOW"} WINS!`
                 gameStatus.style.color = isBlueTurn ? "#679BF1" : "#FFC40A";
-                shareButtons.style.visibility = "hidden";
+                shareButtons.style.visibility = "visible";
                 blueStatus.innerHTML = "";
                 yellowStatus.innerHTML = "";
                 clearInterval(gameLoop);
@@ -202,21 +220,3 @@ function checkIfWin(row, col, color){       // returns true if winning condition
 
     return (rowSum === winningCondition) || (colSum === winningCondition) || (diagonalSum === winningCondition) || (antiDiagonalSum === winningCondition);
 };
-
-//============== load twitter JS api //==============
-window.twttr = (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0],
-      t = window.twttr || {};
-    if (d.getElementById(id)) return t;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://platform.twitter.com/widgets.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  
-    t._e = [];
-    t.ready = function(f) {
-      t._e.push(f);
-    };
-  
-    return t;
-  }(document, "script", "twitter-wjs"));
