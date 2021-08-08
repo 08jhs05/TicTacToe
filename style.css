@@ -103,10 +103,7 @@ button {
     color: white;
 }
 
-
 #play-again-button {
-    background-color: #679BF1;
-    color: white;
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
     font-size: large;
