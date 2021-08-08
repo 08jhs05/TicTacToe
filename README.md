@@ -1,6 +1,6 @@
 ## TicTacToe - Cansulta Technical Test
 
-https://user-images.githubusercontent.com/54612573/128615739-8f6ff8a6-d583-45d0-b870-3ddbe1a1e924.mov
+https://user-images.githubusercontent.com/54612573/128619120-21923b3a-ac01-49cc-9510-cf6710acaf17.mov
 
 Open tictactoe.html from your browser to play the game. Plain HTML/CSS/Javascript were used to create the app.
 
