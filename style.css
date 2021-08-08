@@ -77,7 +77,7 @@ button {
 }
 
 #tictactoe-board {
-    background-color: #b9b9b9;
+    background-image: linear-gradient(to right, #679BF1, #FFC40A);
     width: 340px;
     height: 340px;
     display: flex;
@@ -93,6 +93,7 @@ button {
 }
 
 .tictactoe-cell {
+    font-weight: bold;
     width: 100px;
     height: 100px;
     margin: 5px;
@@ -100,6 +101,10 @@ button {
     border-radius: 10px;
     font-size: 80px;
     color: white;
+}
+
+.tictactoe-cell:hover {
+    background-color: #c4c4c4 !important;
 }
 
 #play-again-button {
