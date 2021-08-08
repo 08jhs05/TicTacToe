@@ -147,7 +147,7 @@ function initializeGame(){
     gameLoop = setInterval(gameLoopFunction, 100);      // repeats game loop for every 100 ms.
 };
 
-// gameLoopFunction: 
+// gameLoopFunction: handles overall game flow
 
 function gameLoopFunction(){
     
@@ -222,7 +222,7 @@ function checkIfWin(row, col, color){       // color is true if it's blue's turn
         antiDiagonalSum += cells[i][boardSize - i - 1];
     }
 
-    let winningCondition = color ? 3 : -3;      // either player wins if the sum of any line(vertical, horizontal, diagonal, anti-diagonal)
-                                                // is 3 or -3
+    let winningCondition = color ? 3 : -3;      // one of players wins if the sum of any line(vertical, horizontal, diagonal, anti-diagonal)
+                                                // equal to 3 or -3
     return (rowSum === winningCondition) || (colSum === winningCondition) || (diagonalSum === winningCondition) || (antiDiagonalSum === winningCondition);
 };
