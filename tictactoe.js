@@ -92,13 +92,13 @@ randomOffRadioBtn.addEventListener("change", () => {
 
 keyboardOnRadioBtn.addEventListener("change", () => {   // radio button that turns on keyboard input mode
     keyboardPlay = true;
-    document.getElementById(`cell-${keyboardControlRow},${keyboardControlCol}`).style.borderWidth="6px";    // give focus on the current cell
+    document.getElementById(`cell-${keyboardControlRow},${keyboardControlCol}`).style.borderWidth = "6px";    // give focus on the current cell
     keyboardOnRadioBtn.blur();
 });
 
 keyboardOffRadioBtn.addEventListener("change", () => {
     keyboardPlay = false;
-    document.getElementById(`cell-${keyboardControlRow},${keyboardControlCol}`).style.borderWidth="2px";
+    document.getElementById(`cell-${keyboardControlRow},${keyboardControlCol}`).style.borderWidth = "2px";
     keyboardOffRadioBtn.blur();
 });
 
